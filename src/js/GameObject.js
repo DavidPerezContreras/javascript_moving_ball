@@ -1,6 +1,18 @@
-const player = {
-    x: canvas.width / 2,
-    y: canvas.height / 2,
-    radius: 20,
-    speed: 1
-};
+export class GameObject {
+    constructor(x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    update(deltaTime) {
+        // Update object properties
+    }
+
+    render(ctx) {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+}
